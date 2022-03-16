@@ -169,6 +169,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="nameTextField" destination="8G5-MG-wOV" id="9vV-TA-KWk"/>
+                        <outlet property="passwordTextField" destination="yAA-ac-7Gx" id="FSe-Sy-Uss"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qUR-Ig-t7c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

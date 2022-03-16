@@ -11,7 +11,7 @@ class FirstScreenViewController: UIViewController,Communitor {
    
     
 
-    var flag : Bool?
+    var flag : Bool = false
     @IBOutlet weak var nameTextField: UITextField!
     
     @IBOutlet weak var passwordTextField: UITextField!
@@ -28,7 +28,12 @@ class FirstScreenViewController: UIViewController,Communitor {
         guard let name = nameTextField.text, let password = passwordTextField.text else {
             return
         }
-        
+        if(flag){
+            alartLabel.text = "success"
+        }
+        else{
+            alartLabel.text = "fail"
+        }
         
         
     }
@@ -42,9 +47,8 @@ class FirstScreenViewController: UIViewController,Communitor {
     }
     
     func data(name: String, password: String) {
-        nameTextField.text = name
-        passwordTextField.text = password
-       /* guard let name = nameTextField.text, let password = passwordTextField.text else {
+        
+        guard let name = nameTextField.text, let password = passwordTextField.text else {
             return
         }
         if(name == nameTextField.text && password == passwordTextField.text){
@@ -53,8 +57,8 @@ class FirstScreenViewController: UIViewController,Communitor {
         else{
             flag = false
         }
-    }*/
+    }
     
 
 }
-}
+
