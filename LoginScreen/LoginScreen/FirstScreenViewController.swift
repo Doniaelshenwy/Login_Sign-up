@@ -11,7 +11,8 @@ class FirstScreenViewController: UIViewController,Communitor {
    
     
 
-    var flag : Bool = false
+    var namee = ""
+    var pass = ""
     @IBOutlet weak var nameTextField: UITextField!
     
     @IBOutlet weak var passwordTextField: UITextField!
@@ -28,35 +29,27 @@ class FirstScreenViewController: UIViewController,Communitor {
         guard let name = nameTextField.text, let password = passwordTextField.text else {
             return
         }
-        if(flag){
-            alartLabel.text = "success"
+        if(name == namee && password == pass){
+            alartLabel.text = "Successfly"
         }
         else{
-            alartLabel.text = "fail"
+            alartLabel.text = "Faild, Enter again"
         }
-        
         
     }
     
     @IBAction func signupBtn(_ sender: UIButton) {
         if let vc = self.storyboard?.instantiateViewController(withIdentifier: "SecondSreenViewController") as? SecondSreenViewController{
             vc.delegate = self
-           
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
     func data(name: String, password: String) {
         
-        guard let name = nameTextField.text, let password = passwordTextField.text else {
-            return
-        }
-        if(name == nameTextField.text && password == passwordTextField.text){
-            flag = true
-        }
-        else{
-            flag = false
-        }
+        namee = name
+        pass = password
+        
     }
     
 

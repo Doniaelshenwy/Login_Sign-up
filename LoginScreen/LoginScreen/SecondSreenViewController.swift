@@ -31,6 +31,8 @@ class SecondSreenViewController: UIViewController{
         guard let name = nameTextField.text, let password = passwordTextField.text else {
             return
         }
+        comingMsg1 = name
+        comingMsg2 = password
         delegate?.data(name: name, password: password)
         self.navigationController?.popViewController(animated: true)
         
