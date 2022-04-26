@@ -6,7 +6,8 @@
 //
 
 import Foundation
-
+import UIKit
 protocol Communitor{
-    func data(name : String, password : String) 
+    func data(name : String, password : String)
+    func curveTextField(field : UITextField)
 }

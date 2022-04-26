@@ -112,12 +112,12 @@
 				FCFBF08C27E1457D006F8B5D /* ViewController.swift */,
 				FCFBF0BB27E1499C006F8B5D /* FirstScreenViewController.swift */,
 				FCFBF0BD27E149AC006F8B5D /* SecondSreenViewController.swift */,
+				FCFBF0C127E15208006F8B5D /* Communitor.swift */,
 				FCFBF08E27E1457D006F8B5D /* Main.storyboard */,
 				FCFBF09427E14580006F8B5D /* Assets.xcassets */,
 				FCFBF09627E14580006F8B5D /* LaunchScreen.storyboard */,
 				FCFBF09927E14580006F8B5D /* Info.plist */,
 				FCFBF09127E1457E006F8B5D /* LoginScreen.xcdatamodeld */,
-				FCFBF0C127E15208006F8B5D /* Communitor.swift */,
 			);
 			path = LoginScreen;
 			sourceTree = "<group>";

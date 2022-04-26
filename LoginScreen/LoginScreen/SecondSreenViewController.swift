@@ -22,7 +22,9 @@ class SecondSreenViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        delegate?.curveTextField(field: nameTextField)
+        delegate?.curveTextField(field: passwordTextField)
+      
         
     }
     
@@ -31,10 +33,14 @@ class SecondSreenViewController: UIViewController{
         guard let name = nameTextField.text, let password = passwordTextField.text else {
             return
         }
-        comingMsg1 = name
-        comingMsg2 = password
-        delegate?.data(name: name, password: password)
-        self.navigationController?.popViewController(animated: true)
+        if(name.isEmpty || password.isEmpty){
+            return
+        }
+        else{
+            delegate?.data(name: name, password: password)
+            self.navigationController?.popViewController(animated: true)
+        }
+        
         
     }
 
